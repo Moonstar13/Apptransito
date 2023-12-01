@@ -1,0 +1,24 @@
+package com.devlancer.devlancer;
+
+import org.junit.jupiter.api.Test;
+
+import com.devlancer.devlancer.empresa.Empresa;
+
+import junit.framework.TestCase;
+
+public class TestEmpresa extends TestCase{
+
+	@Test
+	public void testEmpresa() {
+		Integer identifier = 5;
+		String nome = "Apple";
+		String projeto= "Desenvolvimento de celular";
+		Empresa empresaEncontrado = new Empresa();
+		empresaEncontrado.setId(identifier);
+		empresaEncontrado.setNome(nome);
+		empresaEncontrado.setProjeto(projeto);
+		assertEquals(nome, empresaEncontrado.getNome());
+		assertEquals(projeto, empresaEncontrado.getProjeto());
+		assertEquals(identifier, empresaEncontrado.getId());
+	}
+}
